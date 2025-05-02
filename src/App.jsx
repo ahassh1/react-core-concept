@@ -11,6 +11,8 @@ function App() {
       <Student name= 'habib' tech='java'></Student>
       <Student name= 'ajof' tech='python'></Student>
       <Developer></Developer>
+      <Player name = 'Tamim' runs = '6000'></Player>
+      <Player name= 'Mashrafee' ></Player>
     
     
      
@@ -42,7 +44,11 @@ function Person(){
     <div className='students'>
       <h1>hi there </h1>
       <h2> hello</h2>
-      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam architecto, asperiores voluptates maxime numquam cum beatae ipsa similique veritatis, at minima.</h1>
+      <h1>Lorem ipsum dolor sit amet consectetur,
+         adipisicing elit. Laboriosam architecto, asperiores 
+         voluptates maxime numquam cum beatae 
+         ipsa similique veritatis, at minima.</h1>
+
       <h3>Developer: {props.name}</h3>
       <p>Technology:{props.tech}</p>
     </div>
@@ -63,4 +69,13 @@ function Person(){
          <p style={newStyle}>I am the person : {name} {age}</p>
     )
   }
+  function Player({name,runs='1000'}){
+    return(
+      <div className='first'>
+        <h3>Name: {name}</h3>
+        <p>Run: {runs}</p>
+      </div>
+    )
+  }
 export default App
+ 
