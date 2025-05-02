@@ -15,10 +15,13 @@ function App() {
       <Developer></Developer>
       <Player name = 'Tamim' runs = '6000'></Player>
       <Player name= 'Mashrafee' ></Player>
+
       <Todo
-       task= 'learn react js'
-        isTrue={true} time={time}>
-       </Todo>
+        task= 'learn react js'
+        isTrue={true}
+       time={time}>
+      </Todo>
+
       <Todo task= 'learn node js' isTrue={false}></Todo>
       <Todo task= 'shower now' isTrue={true} time='120'></Todo>
     
