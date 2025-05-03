@@ -1,12 +1,31 @@
 
 import './App.css'
 import Todo from './Todo'
+import Actor from './Actor';
+import Singer from './Singer';
 
 function App() {
+
+  const actors = ['polash','habib', 'ahasan','jasim','bappa raj','rajjak']
+
+  const singers =[
+    {id:1, name:'mahfuz' , age: 55},
+    {id:2, name:'minar' , age: 35},
+    {id:3, name:'shuboro' , age: 45}
+  ]
+
   const time =50;
 
   return (
     <>
+    {
+        actors.map(actor => <Actor key={actor} actor ={actor}></Actor>)
+    }
+
+    {
+      singers.map(singer => <Singer key={singer.id}
+         singer={singer}></Singer>)
+    }
     
       <Person></Person>
       <Student name='ahasan' tech='js'></Student>
@@ -88,5 +107,7 @@ function Person(){
       </div>
     )
   }
+
+    
 export default App
  
