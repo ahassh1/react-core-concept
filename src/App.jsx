@@ -16,7 +16,21 @@ function App() {
 
   const time =50;
 
+  function handleClicked(){
+      alert('i am clicked')
+  }
+
+  const handleClicked2=()=>{
+    alert('i am clicked2')
+  }
+
+  const handleclick = (num)=>{
+    const newNum = num + 5;
+    alert(newNum)
+  }
+
   return (
+
     <>
     {
         actors.map(actor => <Actor key={actor} actor ={actor}></Actor>)
@@ -44,7 +58,10 @@ function App() {
       <Todo task= 'learn node js' isTrue={false}></Todo>
       <Todo task= 'shower now' isTrue={true} time='120'></Todo>
     
-    
+     <button onClick={handleClicked}>click me </button>
+     <button onClick={handleClicked2}>click me 2</button>
+     <button onClick={()=>{alert('clicked me 3')}}>click me 3</button>
+     <button onClick={()=>handleclick(10)}>click me 4</button>
      
     </>
   )
