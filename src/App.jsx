@@ -3,6 +3,9 @@ import './App.css'
 import Todo from './Todo'
 import Actor from './Actor';
 import Singer from './Singer';
+import Counter from './counter';
+
+
 
 function App() {
 
@@ -32,15 +35,17 @@ function App() {
   return (
 
     <>
+
     {
-        actors.map(actor => <Actor key={actor} actor ={actor}></Actor>)
+      actors.map(actor => <Actor key={actor} actor ={actor}></Actor>)
     }
 
     {
       singers.map(singer => <Singer key={singer.id}
-         singer={singer}></Singer>)
-    }
+        singer={singer}></Singer>)
+      }
     
+      <Counter></Counter>
       <Person></Person>
       <Student name='ahasan' tech='js'></Student>
       <Student name= 'habib' tech='java'></Student>
@@ -62,7 +67,7 @@ function App() {
      <button onClick={handleClicked2}>click me 2</button>
      <button onClick={()=>{alert('clicked me 3')}}>click me 3</button>
      <button onClick={()=>handleclick(10)}>click me 4</button>
-     
+      
     </>
   )
 }
