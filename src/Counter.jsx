@@ -14,7 +14,10 @@ export default function Counter(){
 
     return(
         <div  style={counterStyle}>
-        <h3>Count:</h3>
+            {
+                count> 5 && <p>your score more than 5</p>
+            }
+        <h3>Count: {count}</h3>
         <button onClick={handleAdd}> Add</button>
     </div>
 )

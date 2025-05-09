@@ -4,6 +4,7 @@ import Todo from './Todo'
 import Actor from './Actor';
 import Singer from './Singer';
 import Counter from './counter';
+import Batsman from './Batsman';
 
 
 
@@ -35,6 +36,7 @@ function App() {
   return (
 
     <>
+    <Batsman></Batsman>
 
     {
       actors.map(actor => <Actor key={actor} actor ={actor}></Actor>)
