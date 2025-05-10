@@ -67,7 +67,9 @@ function App() {
       </Suspense>
 
 
-    
+    <Suspense fallback= {<h4>this is post items.....</h4>}>
+         <Posts postsPromise={postsPromise}></Posts>
+    </Suspense>
 
     {
       actors.map(actor => <Actor key={actor} actor ={actor}></Actor>)
