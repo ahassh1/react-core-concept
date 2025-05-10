@@ -7,6 +7,7 @@ import Counter from './counter';
 import Batsman from './Batsman';
 import { Suspense } from 'react';
 import Friends from './Friends';
+import Posts from './Posts';
 
 const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 .then(res => res.json())
@@ -16,9 +17,16 @@ const fetchFriends = async()=> {
     return res.json();
 }
 
+const fetchPosts = async()=>{
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  return res.json();
+}
+
 function App() {
 
    const friendsPromise  = fetchFriends();
+
+   const postsPromise = fetchPosts();
 
   const actors = ['polash','habib', 'ahasan','jasim','bappa raj','rajjak']
 
@@ -53,12 +61,13 @@ function App() {
 
 
 
-    
-
     <Suspense fallback={<h2>hi there this is 
       my all childhood friends..</h2>}>
          <Friends friendsPromise={friendsPromise}></Friends>
       </Suspense>
+
+
+    
 
     {
       actors.map(actor => <Actor key={actor} actor ={actor}></Actor>)
