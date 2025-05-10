@@ -6,8 +6,8 @@ export default function Counter(){
     const handleAdd = ()=>{
         const newCount = count +1;
         setCount(newCount)
-
     }
+    
     const counterStyle={
         border: '3px solid purple'
     }
